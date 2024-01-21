@@ -1,9 +1,16 @@
-let express = require('express');
-let router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET users listing. */
-router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
+router.post('/login', (req, res) => {
+  res.send('login');
+});
+
+router.post('/register', (req, res) => {
+  res.send('register');
+});
+
+router.get('/current', (req, res) => {
+  res.send('current');
 });
 
 module.exports = router;
